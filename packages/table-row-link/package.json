@@ -23,7 +23,7 @@
     "accessibility"
   ],
   "scripts": {
-    "build": "npx microbundle --name CheckAll",
+    "build": "npx microbundle --name TableRowLink",
     "test": "node_modules/.bin/jest --coverage",
     "dev": "webpack-dev-server --config example/webpack.config.js --mode development",
     "prod": "webpack --config example/webpack.config.js --mode production",
