@@ -16,7 +16,7 @@ describe(`Measure > hit validation`, () => {
                 dp: '/',
                 z: cacheBuster()
             }, 
-            action: 'debug/collect'
+            action: '/debug/collect'
         });
         const res = await fetch(reqUrl).then(res => res.json());
         expect(res.hitParsingResult[0].valid).toEqual(true);

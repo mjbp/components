@@ -13,7 +13,7 @@ describe('Measure > shared > compose > url', () => {
                 dp: '/',
                 z: 'test-z'
             },
-            action: 'collect'
+            action: '/collect'
         });
         expect(requestUrl).toEqual(`${HOSTNAME}/collect?v=1&t=pageview&tid=${global.tid}&cid=test&dp=%2F&z=test-z`);
     });
