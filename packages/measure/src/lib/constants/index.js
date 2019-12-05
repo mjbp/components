@@ -173,6 +173,7 @@ export const PERSISTENT_PARAMETERS = [
 	"v",
 	"cid",
 	"uid",
+	"tid",
 	"aip",
 	"ds",
 	"sr",
