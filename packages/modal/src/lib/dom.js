@@ -94,6 +94,22 @@ const close = state => {
 };
 
 /* 
+ * @param Store, Object, model or store of the current instance
+ */
+const hideOverflow = Store => {
+    Store.dispatch({ offsetCache: window.pageYOffset });
+    document.body.style.overflow = 'hidden';
+};
+
+/* 
+ * @param Store, Object, model or store of the current instance
+ */
+const showOverflow = Store => {
+    document.body.style.overflow = null;
+    window.scrollTo(0, Store.getState().offsetCache);
+};
+
+/* 
  * Partially applied function that returns a function
  *
  * @param Store, Object, model or store of the current instance
@@ -101,8 +117,14 @@ const close = state => {
  *
  */
 export const change = Store => state => {
-    if (state.isOpen) open(state);
-    else close(state);
+    if (state.isOpen) {
+        open(state);
+        state.settings.hideBodyOverflow && hideOverflow(Store);
+    } else {
+        close(state);
+        state.settings.hideBodyOverflow && showOverflow(Store);
+    }
+
     typeof state.settings.callback === 'function' &&  state.settings.callback.call(state);
 };
 

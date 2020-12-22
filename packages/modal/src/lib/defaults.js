@@ -11,6 +11,7 @@ export default {
     onClassName: 'is--active',
     // mainSelector: 'main',
     toggleSelectorAttribute: 'data-modal-toggle',
+    hideBodyOverflow: true,
     callback: false,
     delay: 0
 };

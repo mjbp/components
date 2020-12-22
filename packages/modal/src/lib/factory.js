@@ -25,7 +25,8 @@ export default ({ node, settings }) => {
         focusableChildren: getFocusableChildren(node),
         keyListener: keyListener(Store),
         lastFocused: false,
-        isOpen: false
+        isOpen: false,
+        offsetCache: null
     }, [ initUI(Store) ]);
 
     return {
