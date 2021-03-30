@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // custom-dimensions
     //
 
-    const __m = Measure.init( 'UA-141774857-1'/*, { custom }*/);
+    const __m = Measure.init('UA-141774857-1'/*, { custom }*/);
 
     // ecommerce(__m);
     // e-commerce tracking initialisers can also be named imports from auto-commerce
