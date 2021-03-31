@@ -3,7 +3,8 @@
   "private": false,
   "scripts": {
     "gh-pages": "node tools/gh-pages/render",
-    "prepublish": "npm run gh-pages -s"
+    "prepublish": "npm run gh-pages -s",
+    "test:debug": "node --inspect node_modules/.bin/jest --runInBand"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",
